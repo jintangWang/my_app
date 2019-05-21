@@ -3,15 +3,17 @@ language: android
 
 android:
   components:
+  - tools
+  - platform-tools
   - build-tools-27.0.3
   - android-27
   # Additional components
-  - extra-google-google_play_services
-  - extra-google-m2repository
   - extra-android-m2repository
+  - extra-google-m2repository
+  - extra-google-android-support
   # Specify at least one system image,
   # if you need to run emulator(s) during your tests\
-  - sys-img-armeabi-v7a-google_apis-27
+  - sys-img-armeabi-v7a-google_apis-25
 #licenses:
 #  - 'android-sdk-preview-license-.+'
 #  - 'android-sdk-license-.+'
@@ -28,10 +30,10 @@ addons:
     - fonts-droid
 
 before_script:
-  - wget http://services.gradle.org/distributions/gradle-3.5-bin.zip
-  - unzip -qq gradle-3.5-bin.zip
-  - export GRADLE_HOME=$PWD/gradle-3.5
-  - export PATH=$GRADLE_HOME/bin:$PATH
+#  - wget http://services.gradle.org/distributions/gradle-3.5-bin.zip
+#  - unzip -qq gradle-3.5-bin.zip
+#  - export GRADLE_HOME=$PWD/gradle-3.5
+#  - export PATH=$GRADLE_HOME/bin:$PATH
   - git clone https://github.com/flutter/flutter.git -b stable --depth 1
 script:
-  - ./flutter/bin/flutter packages get && ./flutter/bin/flutter -v build apk
+  - ./flutter/bin/flutter packages get && ./flutter/bin/flutter -v build apk --release
