@@ -14,10 +14,10 @@ android:
   # Specify at least one system image,
   # if you need to run emulator(s) during your tests\
   - sys-img-armeabi-v7a-google_apis-25
-licenses:
-  - 'android-sdk-preview-license-.+'
-  - 'android-sdk-license-.+'
-  - 'google-gdk-license-.+'
+#licenses:
+#  - 'android-sdk-preview-license-.+'
+#  - 'android-sdk-license-.+'
+#  - 'google-gdk-license-.+'
 jdk: oraclejdk8
 sudo: false
 addons:
