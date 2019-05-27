@@ -9,3 +9,4 @@ A new Flutter project. Init by flutter.
 - test CI 5
 - test CI 6
 - test CI 7
+- test CI 8
