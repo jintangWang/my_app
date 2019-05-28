@@ -37,8 +37,8 @@ before_script:
 #  - /usr/local/android-sdk/tools/bin/sdkmanager --update
   - git clone https://github.com/flutter/flutter.git -b stable --depth 1
   - export PATH="$PATH:`pwd`/flutter/bin"
-  - flutter doctor
 #  - flutter doctor --android-licenses
 script:
+  - flutter doctor
   - flutter packages get
   - flutter -v build apk
