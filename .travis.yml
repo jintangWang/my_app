@@ -37,4 +37,5 @@ before_script:
   - git clone https://github.com/flutter/flutter.git -b stable --depth 1
 script:
   - ./flutter/bin/flutter packages get
+  - ./flutter/bin/flutter doctor
   - ./flutter/bin/flutter -v build apk
