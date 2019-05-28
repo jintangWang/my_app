@@ -35,7 +35,9 @@ before_script:
 #  - export GRADLE_HOME=$PWD/gradle-3.5
 #  - export PATH=$GRADLE_HOME/bin:$PATH
   - git clone https://github.com/flutter/flutter.git -b stable --depth 1
+  - export PATH="$PATH:`pwd`/flutter/bin"
+#  - flutter doctor
+  - flutter doctor --android-licenses
 script:
-  - ./flutter/bin/flutter packages get
-  - ./flutter/bin/flutter doctor
-  - ./flutter/bin/flutter -v build apk
+  - flutter packages get
+  - flutter -v build apk
