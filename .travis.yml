@@ -30,7 +30,7 @@ before_script:
   - unzip -qq gradle-3.5-bin.zip
   - export GRADLE_HOME=$PWD/gradle-3.5
   - export PATH=$GRADLE_HOME/bin:$PATH
-#  - /usr/local/android-sdk/tools/bin/sdkmanager platforms;android-28 build-tools;28.0.3
+  - /usr/local/android-sdk/tools/bin/sdkmanager "platforms;android-28" "build-tools;28.0.3"
   - git clone https://github.com/flutter/flutter.git -b stable --depth 1
   - export PATH="$PATH:`pwd`/flutter/bin"
 #  - flutter doctor --android-licenses
@@ -38,7 +38,7 @@ script:
   - flutter packages get
   - flutter precache
   - yes
-#  - /usr/local/android-sdk/tools/bin/sdkmanager --update
+  - /usr/local/android-sdk/tools/bin/sdkmanager --update
   - flutter doctor --android-licenses
 #  - echo y
   - flutter doctor && flutter -v build apk
