@@ -25,3 +25,4 @@ A new Flutter project. Init by flutter.
 - test CI 21
 - test CI 22
 - test CI 23
+- test CI 24
