@@ -37,8 +37,8 @@ before_script:
 script:
   - flutter packages get
   - flutter precache
-  - yes
-  - /usr/local/android-sdk/tools/bin/sdkmanager --update
+#  - yes
+#  - /usr/local/android-sdk/tools/bin/sdkmanager --update
   - flutter doctor --android-licenses
 #  - echo y
   - flutter doctor && flutter -v build apk
