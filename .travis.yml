@@ -40,7 +40,7 @@ before_script:
 script:
 - flutter packages get
 - flutter precache
-- flutter doctor --android-licenses
+- yes | flutter doctor --android-licenses
 #  - echo y
 - flutter doctor && flutter -v build apk
 
